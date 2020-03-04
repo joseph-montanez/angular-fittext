@@ -66,6 +66,10 @@ export class AngularFittextDirective implements AfterViewInit, OnInit, OnChanges
   }
 
   private setFontSize = (delay: number = this.delay): void => {
+    if(this.resizeTimeout){
+      clearTimeout(this.resizeTimeout);
+      this.resizeTimeout = undefined;
+    }
     this.resizeTimeout = setTimeout(
       (() => {
         if (this.fittextElement.offsetHeight * this.fittextElement.offsetWidth !== 0) {
@@ -74,9 +78,10 @@ export class AngularFittextDirective implements AfterViewInit, OnInit, OnChanges
           // set new
           this.setStyles(this.calculateNewFontSize(), this.lineHeight, this.display);
         }
+        this.resizeTimeout = undefined;
       }).bind(this),
       delay
-    );
+    ) as any;
   };
 
   private calculateNewFontSize = (): number => {
