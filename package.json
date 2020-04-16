@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "packagr": "ng-packagr -p ng-package.json",
     "pack": "npm run update && npm run packagr && cd dist && npm pack && cd -",
-    "update": "rm -Rf node_modules package-lock.json && npm install"
+    "update": "rm -Rf node_modules package-lock.json && npm install",
+    "ng": "ng"
   },
   "repository": {
     "type": "git",
@@ -64,15 +65,13 @@
     "url": "https://github.com/sollenne/angular-fittext/issues"
   },
   "homepage": "https://github.com/sollenne/angular-fittext#readme",
-  "peerDependencies": {
-    "@angular/core": ">=5.0.0"
-  },
+  "peerDependencies": {},
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.4",
-    "@angular/cli": "^9.0.4",
-    "@angular/compiler": "^9.0.4",
-    "@angular/compiler-cli": "^9.0.4",
-    "@angular/core": "^9.0.4",
+    "@angular-devkit/build-angular": "~0.901.1",
+    "@angular/cli": "^9.1.1",
+    "@angular/compiler": "^9.1.2",
+    "@angular/compiler-cli": "^9.1.2",
+    "@angular/core": "^9.1.2",
     "@types/jasmine": "~3.5.7",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^12.12.26",
@@ -88,13 +87,13 @@
     "karma-jasmine-html-reporter": "^1.5.2",
     "ng-packagr": "^9.0.2",
     "protractor": "~5.4.3",
-    "rxjs": "^6.5.4",
+    "rxjs": "^6.5.5",
     "ts-node": "~8.6.2",
     "tsickle": "^0.38.0",
     "tslib": "^1.11.1",
     "tslint": "~6.0.0",
     "typescript": "~3.7.5",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
