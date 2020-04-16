@@ -95,7 +95,5 @@
     "typescript": "~3.7.5",
     "zone.js": "~0.10.3"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  }
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
