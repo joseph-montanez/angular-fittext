@@ -27,7 +27,5 @@ jobs:
       run: npm i
 
     # Runs a set of commands using the runners shell
-    - name: Run test and build
-      run: |
-        npm run test
-        npm run buil
+    - name: Pack
+      run: npm run pack
